@@ -1,0 +1,232 @@
+.hero {
+    max-width: 98%;
+    margin: auto;
+}
+
+.hero-content {
+    text-align: center;
+     margin-top: 70px;
+}
+
+.hero-content p:nth-child(1) {
+   font-size: 2rem;
+
+}
+
+
+.hero-content p:nth-child(2) {
+    padding-top: 5px;
+   font-size: 0.95rem;
+}
+
+.cta-btn {
+    margin-top: 30px;
+    
+}
+
+.cta-btn a:hover {
+    background-color: #fff;
+    border: 3px solid rgba(214, 248, 205, .9);
+}
+.cta-btn a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #D6F8CD;
+    transition: 0.3s;
+}
+
+
+.features {
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.feature-titles {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.feature-titles p {
+    font-size: 0.9rem;
+}
+
+.feature-titles h3 {
+    font-size: 1.3rem;
+}
+
+.feature-titles span {
+    background: #82987D;
+    background: linear-gradient(to right, #82987D 8%, #46E21D 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    padding: 17px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 46px -16px rgba(0,0,0,0.3);
+}
+
+.card i {
+    padding: 15px;
+    background-color: #D6F8CD;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.title {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.description {
+    line-height: 1.5;
+}
+
+.cta {
+    margin: 20px auto;
+    max-width: 90%;
+    min-height: 200px;
+    background-color: rgba(214, 248, 205, .43);
+    filter: blur(80%);
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.cta-content {
+    padding-top: 40px;
+}
+
+.cta-content p:nth-child(1) {
+    font-size: 0.8rem;
+}
+
+.cta-content p:nth-child(2) {
+    padding: 0px 8px;
+    font-weight: bold;
+    color: #14746F;
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.cta-button {
+    margin-top: 30px;
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: #14746F;
+    background-color: #C8FFBA;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@media  screen and (min-width:768px) {
+    body {
+        background-color: whitesmoke;
+    }
+    .hero {
+        max-width: 90%;
+        margin: auto;
+    }
+    .hero-content p:nth-child(1) {
+        font-size:2.8rem;
+    }
+
+    .hero-content p:nth-child(2) {
+        font-size:1.3rem;
+    }
+
+    .features {
+       
+        margin-top: 70px;
+    }
+
+    .feature-titles h3 {
+        font-size: 1.7rem;
+    }
+
+    .cta-content {
+        padding: 15px;
+    }
+
+    
+    .cta-content p:nth-child(1) {
+        font-size: 0.9rem;
+    }
+
+    .cta-content p:nth-child(2) {
+        font-size: 1.7rem;
+    }
+    
+}
+
+
+@media screen and (min-width:850px) {
+    body {
+        background-color: whitesmoke;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-family: "Poppins";
+    }
+   
+
+}
+
+@media screen and (min-width:1200px) {
+
+    body {
+        background-color: whitesmoke;
+        background-image: url(../img/food-plate.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 800px;
+    }
+    .hero {
+        max-width: 86%;
+        margin: auto;
+    }
+    .hero-content p:nth-child(1) {
+        font-size: 3.5rem;
+        max-width: 70%;
+    }
+
+    .hero-content {
+        margin-top: 8rem;
+        text-align: left;
+        display: flex;
+    }
+
+    .features {
+        margin-top: 25rem;
+    }
+
+    
+
+    .cta-content {
+        padding-top: 50px;
+    }
+    
+}
+
+

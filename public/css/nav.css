@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+header h1 {
+    font-family: "Poppins", "sans-serif";
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.screen-big {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    text-align: center;
+    justify-self: space-between;
+    align-items: center;
+    top: 70px;
+    gap: 20px;
+    background: rgba(214, 248, 205);
+    width: 100%;
+    transition: 0.3s;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    font-family: "Roboto";
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+@media screen and (min-width:850px) {
+    body {
+        background-color: whitesmoke;
+    }
+    .hamburger {
+        display: none;
+    }
+    .container-md {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-family: "Poppins";
+    }
+
+    .screen-big {
+        min-height: 70px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        gap: 10;
+        width: auto;
+    }
+
+    .nav-item {
+        margin-top: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+    } 
+
+    .nav-link:hover {
+        border-bottom: 5px solid rgba(214, 248, 205, .9);
+    }
+
+    .big-cta {
+        padding: 10px;
+        background-color: rgba(214, 248, 205, .9);
+        border-radius: 10px;
+        color: #14746F;
+    }
+
+    .big-cta:hover {
+        background-color: #fff;
+        border: 3px solid rgba(214, 248, 205, .9);
+    }
+   
+
+}

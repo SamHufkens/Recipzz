@@ -1,0 +1,74 @@
+
+
+
+.quote {
+    display: none;
+}
+
+footer {
+    margin: 40px 0px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav h4 {
+    font-size: 1.7rem;
+}
+
+table th {
+    font-size: 0.9rem;
+}
+
+table td {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+table td a {
+    text-decoration: none;
+    color: black;
+}
+
+.social h4 {
+    font-size: 1.7rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icons p {
+    margin: 8px;
+}
+
+.icons i {
+    padding: 10px;
+    background-color: #C8FFBA;
+    border-radius: 50%;
+    color: white;
+}
+
+@media  screen and (min-width:768px) {
+    .quote {
+        display: block;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .nav h4, .social h4 {
+        font-size: 1.9rem;
+    }
+     table th {
+        font-size: 1rem;
+    }
+
+    .quote {
+        font-size: 1.6rem;
+    }
+}
