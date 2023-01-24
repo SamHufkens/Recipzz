@@ -1,0 +1,78 @@
+
+<%- include('../partials/header.ejs')  %> 
+
+<%- include('../partials/nav.ejs')  %> 
+
+<main>
+    <div class="form-container">
+        <div class="form">
+            <h2>Register</h2>
+            <form action="/register">
+                <div class="username">
+                    <label for="username">Username</label> <br>
+                    <input class="input" type="text" width="300" required name="username">
+                    <div class="name error"></div>
+                </div>
+                <div class="email">
+                    <label for="email">E-mail</label> <br>
+                    <input class="input" type="email" width="300" required name="email">
+                    <div class="email error"></div>
+                </div>
+                <div class="password">
+                    <label for="password">Password</label> <br>
+                    <input class="input" type="password" required name="password">
+                    <div class="password error"></div>
+                </div>
+                <button class="login-btn">Register</button>
+            </form>
+            <small>Have an account already? Log in <a href="/login">here</a></small>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+
+<script>
+    // get the form and errors elements 
+    const form = document.querySelector('form');
+    const usernameError = document.querySelector('.name.error');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) =>  {
+        e.preventDefault()
+
+        // reset errors
+        usernameError.textContent = ''
+        emailError.textContent = ''
+        passwordError.textContent = ''
+
+
+        // get the username, email, password value
+        const username = form.username.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        try {
+            const res = await fetch('/register', {
+                method: "POST",
+                body: JSON.stringify({username, email, password}),
+                headers: {"Content-Type": "application/json"}
+            })
+            const data = await res.json()
+            if (data.errors) {
+                usernameError.textContent = data.errors.username
+                emailError.textContent = data.errors.email
+                passwordError.textContent = data.errors.password
+            }
+
+            if (data.user) {
+                location.assign('/login')
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    })
+
+
+</script>
