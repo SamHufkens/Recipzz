@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs') %> 
+
+<%- include('../partials/nav.ejs')  %> 
+
+
+
+<main>
+    <div class="detail-container">
+        <div class="detail">
+            <div class="img-section">
+                <img src="img/pexels-robin-stickel-70497.jpg" width="600px" alt="">
+            </div>
+            <div class="text-section">
+                <h2><% recipe.title %> </h2>
+                <p><strong>Time</strong>: <%= recipe.time %> min. </p>
+                <p><strong>Ingridiënts</strong></p>
+                <p><%= recipe.ingridiënts %></p>
+                <p><strong>Directions</strong></p>
+                <p class="directions"><%= recipe.preparation %> </p>  
+                <form>
+                    <a class="delete-btn" data-doc="<%= recipe._id %>">Delete</a>
+                </form>        
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+
+<script>
+    const trashcan = document.querySelector('a.delete-btn');
+
+    trashcan.addEventListener('click', (e) => {
+        const endpoint = `/${trashcan.dataset.doc}`;
+
+        fetch(endpoint, {
+            method: "DELETE"
+        })
+        .then((response) => response.json())
+        .then((data) => window.location.href = data.redirect)
+        .catch(err => console.log(err));
+    })
+</script>

@@ -4,9 +4,10 @@
             <div class="screen-big">
                 <h1>Recipzz</h1>
                 <ul class="nav-menu">
-                    <% if (user) { %> 
+                    <% if (user) { %>
+                        <li class="nav-item"><a class="nav-link" href="/homeLogged">Recipes</a></li>
                         <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
-                        <li class="nav-item"><p class="nav-link">Welcome, <%= user.username  %> </p></li>
+                        <li class="nav-item"><p>Welcome, <%= user.username  %> </p></li>
                     <% } else { %> 
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About</a></li>

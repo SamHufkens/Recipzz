@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %> 
+
+<%- include('../partials/nav.ejs')  %> 
+
+<main>
+    <div class="form-container">
+        <div class="form">
+            <h2>Create a new recipe</h2>
+            <form action="/homeLogged" method="POST">
+                <div class="recipe-name">
+                    <label for="recipe-name">Recipe Name</label> <br>
+                    <input class="input" type="text" width="300" required name="title">
+                    <div class="name error"></div>
+                </div>
+                <div class="recipe-ingriënts">
+                    <label for="password">Ingridiënts</label> <br>
+                    <textarea name="ingridiënts" cols="30" rows="10"></textarea>
+                    <div class="ingridiënts error"></div>
+                </div>
+                <div class="recipe-preparation">
+                    <label for="password">Preparation</label> <br>
+                    <textarea name="preparation" cols="50" rows="4"></textarea>
+                    <div class="preparation error"></div>
+                </div>
+                <div class="recipe-time">
+                    <label for="time">Time</label> <br>
+                    <input class="input-n" type="text"  required name="time"> min.
+                    <div class="time error"></div>
+                </div>
+                <button class="recipe-btn">Save</button>
+            </form>
+        </div>
+    </div>
+    
+</main>
+</body>
+</html>
