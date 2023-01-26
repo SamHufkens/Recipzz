@@ -34,16 +34,17 @@ const create_post = (req, res) => {
         .catch((err) => console.log(err))
 }
 
-// Recipe in detail
+// Recipe in detail 
 
 const details = (req, res) => {
     const id = req.params.id 
-    Recipe.findById(id)
+    Recipe.findById(id).populate('author')
         .then((result) => {
             res.render("recipes/details", {
                 title: "Detail",
                 cssFile: "../css/detail.css",
-                recipe: result
+                recipe: result,
+                user: req.user
             })
         })
         .catch((err) => console.log(err))

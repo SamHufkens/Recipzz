@@ -33,6 +33,16 @@ form label {
     font-size: 16px;
 }
 
+#add-ing {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(214, 248, 205, .9);
+    color: #14746F;
+    border: none;
+    cursor: pointer;
+}
+
 .input-n {
     margin-top: 8px;
     padding-left: 15px;

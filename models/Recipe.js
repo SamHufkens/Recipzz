@@ -10,7 +10,7 @@ const RecipeSchema = new mongoose.Schema({
     },
 
     ingridiënts: {
-        type: String,
+        type: [String],
         required: true
     },
      
@@ -25,7 +25,8 @@ const RecipeSchema = new mongoose.Schema({
     },
 
     author: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'User' 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'User',
     }
 }, {timestamps: true})
 

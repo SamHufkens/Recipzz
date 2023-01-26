@@ -14,12 +14,19 @@
                 <h2><% recipe.title %> </h2>
                 <p><strong>Time</strong>: <%= recipe.time %> min. </p>
                 <p><strong>Ingridiënts</strong></p>
-                <p><%= recipe.ingridiënts %></p>
+                <div class="ing-list">
+                    <% recipe.ingridiënts.forEach(ing => { %> 
+                        <ul>
+                            <li><%= ing %></li>
+                        </ul>
+                    <% }) %> 
+                </div>
                 <p><strong>Directions</strong></p>
                 <p class="directions"><%= recipe.preparation %> </p>  
-                <form>
-                    <a class="delete-btn" data-doc="<%= recipe._id %>">Delete</a>
-                </form>        
+                <form>    
+                        <a class="delete-btn" data-doc="<%= recipe._id %>">Delete</a>  
+                </form>
+                    
             </div>
         </div>
     </div>

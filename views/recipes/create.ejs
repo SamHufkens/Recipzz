@@ -7,16 +7,21 @@
         <div class="form">
             <h2>Create a new recipe</h2>
             <form action="/homeLogged" method="POST">
-                <div class="recipe-name">
+                <div class="recipe-name"> 
                     <label for="recipe-name">Recipe Name</label> <br>
                     <input class="input" type="text" width="300" required name="title">
                     <div class="name error"></div>
                 </div>
                 <div class="recipe-ingriënts">
-                    <label for="password">Ingridiënts</label> <br>
-                    <textarea name="ingridiënts" cols="30" rows="10"></textarea>
+                    <label for="ingridient">Ingridiënts</label> <br>
+                    <button id="add-ing" type="button">Add Ingridiënts</button>
                     <div class="ingridiënts error"></div>
                 </div>
+                
+
+                <div id="recipes-list"></div>
+
+                <br>
                 <div class="recipe-preparation">
                     <label for="password">Preparation</label> <br>
                     <textarea name="preparation" cols="50" rows="4"></textarea>
@@ -33,5 +38,26 @@
     </div>
     
 </main>
+<script>
+    const form = document.querySelector('form');
+    const addButton = document.getElementById('add-ing');
+    const ingridientList = document.getElementById('recipes-list');
+
+    addButton.addEventListener('click', addIngriedientInput);
+
+    function addIngriedientInput() {
+        const ingridientNameInput = document.createElement('input');
+        ingridientNameInput.type = "text";
+        ingridientNameInput.name = "ingridiënts";
+        ingridientNameInput.required = true;
+        ingridientNameInput.className = "input";
+        ingridientList.appendChild(ingridientNameInput);
+
+        const br = document.createElement('br');
+        ingridientList.append(br);
+    }
+</script>
 </body>
 </html>
+
+
